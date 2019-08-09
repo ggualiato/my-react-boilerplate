@@ -7,7 +7,9 @@
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "server": "node server/server.js"
+    "server": "node server/server.js",
+    "predeploy": "npm run build:prod",
+    "deploy": "gh-pages -d public/dist"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +22,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "gh-pages": "^2.1.1",
     "mini-css-extract-plugin": "^0.8.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
