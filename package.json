@@ -9,7 +9,7 @@
     "dev-server": "webpack-dev-server",
     "server": "node server/server.js",
     "predeploy": "npm run build:prod",
-    "deploy": "gh-pages -d public/dist"
+    "deploy": "gh-pages -d public"
   },
   "keywords": [],
   "author": "",
