@@ -17,7 +17,7 @@ module.exports = (env) => {
                 test: /\.js$/,
                 exclude: /node_modules/
             }, {
-                test: /\.css$/,
+                test: /\.s?css$/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader
@@ -27,7 +27,13 @@ module.exports = (env) => {
                         options: {
                             sourceMap: true
                         }
-                    }                   
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
                 ]
             }]
         },
