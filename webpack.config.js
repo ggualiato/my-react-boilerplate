@@ -1,5 +1,6 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+require("dotenv").config()
 
 module.exports = (env) => {
     const isProduction = env === 'production'
