@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 require("dotenv").config();
 
 module.exports = (env) => {
@@ -41,7 +42,7 @@ module.exports = (env) => {
                 },
             ],
         },
-        plugins: [new MiniCssExtractPlugin({ filename: "styles.css" })],
+        plugins: [new CleanWebpackPlugin(), new MiniCssExtractPlugin({ filename: "styles.css" })],
         devtool: isProduction ? "source-map" : "inline-source-map",
         devServer: {
             contentBase: path.join(__dirname, "public"),
