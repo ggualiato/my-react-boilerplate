@@ -21,23 +21,13 @@ module.exports = (env) => {
                     exclude: /node_modules/,
                 },
                 {
-                    test: /\.s?css$/,
+                    test: /\.less$|.css$/,
                     use: [
                         {
                             loader: MiniCssExtractPlugin.loader,
                         },
-                        {
-                            loader: "css-loader",
-                            options: {
-                                sourceMap: true,
-                            },
-                        },
-                        {
-                            loader: "sass-loader",
-                            options: {
-                                sourceMap: true,
-                            },
-                        },
+                        { loader: "css-loader" },
+                        { loader: "less-loader" },
                     ],
                 },
             ],
