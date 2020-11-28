@@ -30,6 +30,13 @@ module.exports = (env) => {
                         { loader: "less-loader" },
                     ],
                 },
+                {
+                    test: /\.(png|jpe?g|gif|svg)$/i,
+                    loader: "file-loader",
+                    options: {
+                        name: "[path][name].[contenthash].[ext]",
+                    },
+                },
             ],
         },
         plugins: [new CleanWebpackPlugin(), new MiniCssExtractPlugin({ filename: "styles.css" })],
