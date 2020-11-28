@@ -1,9 +1,10 @@
 import React from "react";
 import ReactIcon from "../images/react-icon.png";
+import { sum } from "../utils/utils";
 
 const App = () => {
     const onClick = () => {
-        alert("Hello World ");
+        alert("Hello World " + sum(2, 3));
     };
 
     return (

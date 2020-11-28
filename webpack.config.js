@@ -5,7 +5,7 @@ require("dotenv").config();
 
 module.exports = (env) => {
     return {
-        entry: "./src/index.js",
+        entry: "./src/index.jsx",
         mode: "development",
         output: {
             path: path.join(__dirname, "public", "dist"),
@@ -15,7 +15,7 @@ module.exports = (env) => {
             rules: [
                 {
                     loader: "babel-loader",
-                    test: /\.js$/,
+                    test: /\.js?x$/,
                     exclude: /node_modules/,
                 },
                 {
@@ -40,9 +40,12 @@ module.exports = (env) => {
         plugins: [new CleanWebpackPlugin(), new MiniCssExtractPlugin({ filename: "styles.css" })],
         devtool: env.prod ? "source-map" : "inline-source-map",
         devServer: {
+            overlay: true,
+            open: true,
             contentBase: path.join(__dirname, "public"),
             historyApiFallback: true,
             publicPath: "/dist/",
+            port: 3000,
         },
     };
 };
