@@ -4,8 +4,6 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 require("dotenv").config();
 
 module.exports = (env) => {
-    const isProduction = env === "production";
-
     return {
         entry: "./src/app.js",
         mode: "development",
@@ -40,7 +38,7 @@ module.exports = (env) => {
             ],
         },
         plugins: [new CleanWebpackPlugin(), new MiniCssExtractPlugin({ filename: "styles.css" })],
-        devtool: isProduction ? "source-map" : "inline-source-map",
+        devtool: env.prod ? "source-map" : "inline-source-map",
         devServer: {
             contentBase: path.join(__dirname, "public"),
             historyApiFallback: true,
