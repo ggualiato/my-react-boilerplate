@@ -42,7 +42,6 @@ const commonConfig = {
 };
 
 module.exports = (env) => {
-    console.log(env);
     if (env.prod) {
         return merge(commonConfig, webpackProdConfig);
     }
