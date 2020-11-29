@@ -1,51 +1,53 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const { merge } = require("webpack-merge");
+const webpackDevConfig = require("./config/webpack.dev.config");
+const webpackProdConfig = require("./config/webpack.prod.config");
 require("dotenv").config();
 
-module.exports = (env) => {
-    return {
-        entry: "./src/index.jsx",
-        mode: "development",
-        output: {
-            path: path.join(__dirname, "public", "dist"),
-            filename: "bundle.js",
-        },
-        module: {
-            rules: [
-                {
-                    loader: "babel-loader",
-                    test: /\.js?x$/,
-                    exclude: /node_modules/,
-                },
-                {
-                    test: /\.less$|.css$/,
-                    use: [
-                        {
-                            loader: MiniCssExtractPlugin.loader,
-                        },
-                        { loader: "css-loader" },
-                        { loader: "less-loader" },
-                    ],
-                },
-                {
-                    test: /\.(png|jpe?g|gif|svg)$/i,
-                    loader: "file-loader",
-                    options: {
-                        name: "[path][name].[contenthash].[ext]",
+const commonConfig = {
+    entry: "./src/index.jsx",
+    output: {
+        path: path.join(__dirname, "public", "dist"),
+        filename: "bundle.js",
+    },
+    module: {
+        rules: [
+            {
+                loader: "babel-loader",
+                test: /\.js?x$/,
+                exclude: /node_modules/,
+            },
+            {
+                test: /\.less$|.css$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
                     },
+                    { loader: "css-loader" },
+                    { loader: "less-loader" },
+                ],
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                loader: "file-loader",
+                options: {
+                    name: "[path][name].[contenthash].[ext]",
                 },
-            ],
-        },
-        plugins: [new CleanWebpackPlugin(), new MiniCssExtractPlugin({ filename: "styles.css" })],
-        devtool: env.prod ? "source-map" : "inline-source-map",
-        devServer: {
-            overlay: true,
-            open: true,
-            contentBase: path.join(__dirname, "public"),
-            historyApiFallback: true,
-            publicPath: "/dist/",
-            port: 3000,
-        },
-    };
+            },
+        ],
+    },
+    plugins: [new CleanWebpackPlugin(), new MiniCssExtractPlugin({ filename: "styles.css" })],
+};
+
+module.exports = (env) => {
+    console.log(env);
+    if (env.prod) {
+        return merge(commonConfig, webpackProdConfig);
+    }
+
+    if (env.dev || env.WEBPACK_SERVE) {
+        return merge(commonConfig, webpackDevConfig);
+    }
 };
