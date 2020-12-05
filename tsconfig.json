@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "allowJs": true, // Allow JavaScript files to be compiled
+        "outDir": "./public/dist/",
+        "noImplicitAny": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "jsx": "react",
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "build"]
+}

@@ -7,16 +7,24 @@ const webpackProdConfig = require("./config/webpack.prod.config");
 require("dotenv").config();
 
 const commonConfig = {
-    entry: "./src/index.jsx",
+    entry: "./src/index.tsx",
     output: {
         path: path.join(__dirname, "public", "dist"),
         filename: "bundle.js",
     },
+    resolve: {
+        extensions: [".tsx", ".ts", ".js", "jsx"],
+    },
     module: {
         rules: [
             {
-                loader: "babel-loader",
+                test: /\.ts?x$/,
+                use: "ts-loader",
+                exclude: /node_modules/,
+            },
+            {
                 test: /\.js?x$/,
+                loader: "babel-loader",
                 exclude: /node_modules/,
             },
             {
