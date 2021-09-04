@@ -3,10 +3,11 @@ import ReactIcon from "../images/react-icon.png";
 import Logo from "../images/logo.svg";
 import { sum } from "../utils/utils";
 import { Hello } from "./Hello";
+import { sayHello } from "../utils/hello";
 
 const App: FC = () => {
     const onClick = () => {
-        alert("Hello World " + sum(2, 3));
+        alert(sayHello(" World") + sum(2, 3));
     };
 
     return (
