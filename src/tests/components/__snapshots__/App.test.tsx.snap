@@ -1,3 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render App correctly 1`] = `ShallowWrapper {}`;
+exports[`should render App correctly 1`] = `
+<div
+  className="app"
+>
+  <h3>
+    Hello React- Basic project
+  </h3>
+  <div
+    style={
+      Object {
+        "border": "solid black 1px",
+      }
+    }
+  >
+    PNG
+    <img
+      src="react-icon.png"
+      width="200"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "border": "solid black 1px",
+      }
+    }
+  >
+    SVG
+    <a
+      href="#"
+      onClick={[Function]}
+    >
+      <img
+        src="logo.svg"
+        width="200"
+      />
+    </a>
+  </div>
+  <Hello
+    onClick={[Function]}
+    text="Click here!"
+  />
+</div>
+`;

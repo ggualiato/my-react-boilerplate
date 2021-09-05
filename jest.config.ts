@@ -14,4 +14,5 @@ export default {
         "^.+\\.tsx?$": "babel-jest",
         "^.+\\.(svg|png)$": "<rootDir>/src/tests/transformers/fileTransformers.js",
     },
+    snapshotSerializers: ["enzyme-to-json/serializer"],
 };
