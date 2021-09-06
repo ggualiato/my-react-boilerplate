@@ -1,5 +1,6 @@
 const webpack = require("webpack");
 const path = require("path");
+const envVariables = require("./utils/envVariables");
 
 module.exports = {
     mode: "development",
@@ -12,13 +13,7 @@ module.exports = {
             },
         ],
     },
-    plugins: [
-        new webpack.DefinePlugin({
-            "process.env": {
-                NODE_ENV: JSON.stringify("development"),
-            },
-        }),
-    ],
+    plugins: [new webpack.DefinePlugin(envVariables("development"))],
     devtool: "source-map",
     devServer: {
         overlay: true,

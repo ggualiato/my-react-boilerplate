@@ -4,7 +4,6 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { merge } = require("webpack-merge");
 const webpackDevConfig = require("./config/webpack.dev.config");
 const webpackProdConfig = require("./config/webpack.prod.config");
-require("dotenv").config();
 
 const commonConfig = {
     entry: "./src/index.tsx",
