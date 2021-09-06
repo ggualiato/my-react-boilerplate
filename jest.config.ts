@@ -4,11 +4,8 @@
  */
 
 export default {
-    // The paths to modules that run some code to configure or set up the testing environment before each test
-    setupFiles: ["<rootDir>/src/tests/setupTests.ts"],
-    // The test environment that will be used for testing
+    setupFilesAfterEnv: ["<rootDir>/src/tests/setupTests.ts"],
     testEnvironment: "jsdom",
-    // A map from regular expressions to paths to transformers
     transform: {
         "^.+\\.js?$": "babel-jest",
         "^.+\\.tsx?$": "babel-jest",

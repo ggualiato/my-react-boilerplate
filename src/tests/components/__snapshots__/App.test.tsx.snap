@@ -7,40 +7,34 @@ exports[`should render App correctly 1`] = `
   <h3>
     Hello React- Basic project
   </h3>
-  <div
-    style={
-      Object {
-        "border": "solid black 1px",
-      }
-    }
-  >
-    PNG
-    <img
-      src="react-icon.png"
-      width="200"
-    />
-  </div>
-  <div
-    style={
-      Object {
-        "border": "solid black 1px",
-      }
-    }
-  >
-    SVG
-    <a
-      href="#"
-      onClick={[Function]}
+  <div>
+    <div
+      className="image-wrapper"
     >
+      PNG
       <img
-        src="logo.svg"
+        src="react-icon.png"
         width="200"
       />
-    </a>
+    </div>
+    <div
+      className="image-wrapper"
+    >
+      SVG
+      <a
+        href="#"
+        onClick={[Function]}
+      >
+        <img
+          src="logo.svg"
+          width="200"
+        />
+      </a>
+    </div>
+    <Hello
+      onClick={[Function]}
+      text="Click here!"
+    />
   </div>
-  <Hello
-    onClick={[Function]}
-    text="Click here!"
-  />
 </div>
 `;
