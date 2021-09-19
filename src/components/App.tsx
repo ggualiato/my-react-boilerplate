@@ -3,7 +3,7 @@ import Logo from "../images/logo.svg";
 import ReactIcon from "../images/react-icon.png";
 import { getTodo, getTodos } from "../services/todos";
 import { sayHello } from "../utils/hello";
-import { sum } from "../utils/utils";
+import { sum } from "../utils/sum";
 import Hello from "./Hello";
 
 const App: FC = () => {
