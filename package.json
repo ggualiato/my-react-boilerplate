@@ -10,7 +10,8 @@
         "server": "node server/server.js",
         "test": "jest",
         "test:watch": "jest --watch",
-        "test:update-snapshot": "jest --updateSnapshot"
+        "test:update-snapshot": "jest --updateSnapshot",
+        "prepare": "husky install"
     },
     "keywords": [],
     "author": "",
@@ -43,7 +44,7 @@
         "eslint-plugin-promise": "^5.1.0",
         "eslint-plugin-react": "^7.24.0",
         "file-loader": "^6.2.0",
-        "husky": "^4.3.8",
+        "husky": "^7.0.0",
         "jest": "^27.1.0",
         "mini-css-extract-plugin": "^2.3.0",
         "prettier": "^2.4.1",
@@ -66,10 +67,5 @@
         "source-map-loader": "^1.1.3",
         "ts-loader": "^8.3.0",
         "webpack-merge": "^5.8.0"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "pretty-quick --staged"
-        }
     }
 }
