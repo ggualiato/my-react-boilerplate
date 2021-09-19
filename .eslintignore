@@ -1,4 +1,6 @@
 /node_modules
 /public/dist
+# Find a way to solve eslint in js files
 /config
 /server
+*.js

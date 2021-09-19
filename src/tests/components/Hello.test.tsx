@@ -1,5 +1,5 @@
-import { shallow } from "enzyme";
 import React from "react";
+import { shallow } from "enzyme";
 import Hello from "../../components/Hello";
 
 test("should render Hello correctly", () => {

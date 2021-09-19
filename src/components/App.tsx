@@ -1,10 +1,10 @@
 import React, { FC, useEffect } from "react";
-import ReactIcon from "../images/react-icon.png";
 import Logo from "../images/logo.svg";
+import ReactIcon from "../images/react-icon.png";
+import { getTodo, getTodos } from "../services/todos";
+import { sayHello } from "../utils/hello";
 import { sum } from "../utils/utils";
 import Hello from "./Hello";
-import { sayHello } from "../utils/hello";
-import { getTodo, getTodos } from "../services/todos";
 
 const App: FC = () => {
     useEffect(() => {
