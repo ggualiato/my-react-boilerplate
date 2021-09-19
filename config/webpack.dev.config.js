@@ -16,11 +16,15 @@ module.exports = {
     plugins: [new webpack.DefinePlugin(envVariables("development"))],
     devtool: "source-map",
     devServer: {
-        overlay: true,
+        devMiddleware: {
+            publicPath: "/dist/",
+        },
+        static: {
+            directory: path.join(__dirname, "..", "public"),
+        },
+        client: { overlay: true },
         open: true,
-        contentBase: path.join(__dirname, "..", "public"),
         historyApiFallback: true,
-        publicPath: "/dist/",
         port: 3000,
     },
 };
