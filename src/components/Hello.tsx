@@ -1,10 +1,12 @@
 import React, { FC } from "react";
 
-interface IHelloProps {
+interface HelloProps {
     text: string;
     onClick: () => void;
 }
 
-export const Hello: FC<IHelloProps> = (props) => {
+const Hello: FC<HelloProps> = (props) => {
     return <button onClick={props.onClick}>{props.text}</button>;
 };
+
+export default Hello;
