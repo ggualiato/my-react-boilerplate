@@ -61,7 +61,7 @@
         "webpack-dev-server": "^4.2.1"
     },
     "dependencies": {
-        "axios": "^0.21.3",
+        "axios": "^0.24.0",
         "express": "^4.17.1",
         "less": "^4.1.1",
         "less-loader": "^10.0.1",
