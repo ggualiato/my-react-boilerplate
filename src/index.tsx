@@ -1,7 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
-import "normalize.css";
-import "./styles/styles.less";
+import GlobalStyle from "./styles/global";
 
-ReactDOM.render(<App />, document.getElementById("app"));
+const app = (
+    <>
+        <App />
+        <GlobalStyle />
+    </>
+);
+
+ReactDOM.render(app, document.getElementById("app"));

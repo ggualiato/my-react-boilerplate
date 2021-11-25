@@ -1,10 +1,11 @@
 import React, { FC, useEffect } from "react";
-import Logo from "../images/logo.svg";
-import ReactIcon from "../images/react-icon.png";
-import { getTodo, getTodos } from "../services/todos";
-import { sayHello } from "../utils/hello";
-import { sum } from "../utils/sum";
-import Hello from "./Hello";
+import Logo from "../../images/logo.svg";
+import ReactIcon from "../../images/react-icon.png";
+import Hello from "../Hello/Hello";
+import { getTodo, getTodos } from "./../../services/todos";
+import { sayHello } from "./../../utils/hello";
+import { sum } from "./../../utils/sum";
+import { AppContainer, ImageWrapper } from "./styles";
 
 const App: FC = () => {
     useEffect(() => {
@@ -13,26 +14,26 @@ const App: FC = () => {
     }, []);
 
     const onClick = () => {
-        alert(sayHello(" World") + sum(2, 3));
+        alert(sayHello(" World ") + sum(2, 3));
     };
 
     return (
-        <div className="app">
+        <AppContainer>
             <h3>Hello React- Basic project</h3>
             <div>
-                <div className="image-wrapper">
+                <ImageWrapper>
                     PNG
                     <img width="200" src={ReactIcon} />
-                </div>
-                <div className="image-wrapper">
+                </ImageWrapper>
+                <ImageWrapper>
                     SVG
                     <a href="#" onClick={() => console.log("clicked")}>
                         <img width="200" src={Logo} />
                     </a>
-                </div>
+                </ImageWrapper>
                 <Hello onClick={onClick} text="Click here!" />
             </div>
-        </div>
+        </AppContainer>
     );
 };
 

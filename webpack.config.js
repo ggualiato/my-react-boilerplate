@@ -1,5 +1,4 @@
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { merge } = require("webpack-merge");
 const webpackDevConfig = require("./config/webpack.dev.config");
@@ -27,16 +26,6 @@ const commonConfig = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.less$|.css$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                    },
-                    { loader: "css-loader" },
-                    { loader: "less-loader" },
-                ],
-            },
-            {
                 test: /\.(png|jpe?g|gif|svg)$/i,
                 loader: "file-loader",
                 options: {
@@ -45,7 +34,7 @@ const commonConfig = {
             },
         ],
     },
-    plugins: [new CleanWebpackPlugin(), new MiniCssExtractPlugin({ filename: "styles.css" })],
+    plugins: [new CleanWebpackPlugin()],
 };
 
 module.exports = (env) => {

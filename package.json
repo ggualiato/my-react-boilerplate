@@ -26,11 +26,13 @@
         "@types/jest": "^27.0.1",
         "@types/react": "^17.0.15",
         "@types/react-dom": "^17.0.9",
+        "@types/styled-components": "^5.1.15",
         "@typescript-eslint/eslint-plugin": "^5.3.1",
         "@typescript-eslint/parser": "^5.3.1",
         "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
         "babel-jest": "^27.1.0",
         "babel-loader": "^8.2.2",
+        "babel-plugin-styled-components": "^2.0.1",
         "clean-webpack-plugin": "^4.0.0",
         "css-loader": "^6.3.0",
         "dotenv": "^10.0.0",
@@ -49,7 +51,6 @@
         "file-loader": "^6.2.0",
         "husky": "^7.0.0",
         "jest": "^27.1.0",
-        "mini-css-extract-plugin": "^2.3.0",
         "prettier": "^2.4.1",
         "pretty-quick": "^3.1.1",
         "regenerator-runtime": "^0.13.9",
@@ -64,11 +65,13 @@
     "dependencies": {
         "axios": "^0.24.0",
         "express": "^4.17.1",
-        "less": "^4.1.1",
-        "less-loader": "^10.0.1",
-        "normalize.css": "^8.0.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
+        "styled-components": "^5.3.3",
+        "styled-normalize": "^8.0.7",
         "webpack-merge": "^5.8.0"
+    },
+    "resolutions": {
+        "styled-components": "^5"
     }
 }

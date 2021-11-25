@@ -1,4 +1,6 @@
-.app {
+import styled from "styled-components";
+
+export const AppContainer = styled.div`
     font-size: 20px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
         "Helvetica Neue", sans-serif;
@@ -9,8 +11,8 @@
             height: fit-content;
         }
     }
-}
+`;
 
-.image-wrapper {
+export const ImageWrapper = styled.div`
     width: min-content;
-}
+`;
