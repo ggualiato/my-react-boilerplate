@@ -1,25 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render App correctly 1`] = `
-<div
-  className="app"
->
+<styles__AppContainer>
   <h3>
     Hello React- Basic project
   </h3>
   <div>
-    <div
-      className="image-wrapper"
-    >
+    <styles__ImageWrapper>
       PNG
       <img
         src="react-icon.png"
         width="200"
       />
-    </div>
-    <div
-      className="image-wrapper"
-    >
+    </styles__ImageWrapper>
+    <styles__ImageWrapper>
       SVG
       <a
         href="#"
@@ -30,11 +24,11 @@ exports[`should render App correctly 1`] = `
           width="200"
         />
       </a>
-    </div>
+    </styles__ImageWrapper>
     <Hello
       onClick={[Function]}
       text="Click here!"
     />
   </div>
-</div>
+</styles__AppContainer>
 `;
