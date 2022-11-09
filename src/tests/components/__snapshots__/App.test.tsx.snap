@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button should have color blue 1`] = `
+.c0 {
+  color: blue;
+}
+
+<button
+  className="c0"
+/>
+`;
+
 exports[`should render App correctly 1`] = `
 <styles__AppContainer>
   <h3>
@@ -29,6 +39,11 @@ exports[`should render App correctly 1`] = `
       onClick={[Function]}
       text="Click here!"
     />
+    <styles__Button
+      onClick={[Function]}
+    >
+      Print Hello World
+    </styles__Button>
   </div>
 </styles__AppContainer>
 `;

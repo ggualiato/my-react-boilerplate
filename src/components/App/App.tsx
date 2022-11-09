@@ -5,7 +5,7 @@ import Hello from "../Hello/Hello";
 import { getTodo, getTodos } from "./../../services/todos";
 import { sayHello } from "./../../utils/hello";
 import { sum } from "./../../utils/sum";
-import { AppContainer, ImageWrapper } from "./styles";
+import { AppContainer, Button, ImageWrapper } from "./styles";
 
 const App: FC = () => {
     useEffect(() => {
@@ -32,6 +32,7 @@ const App: FC = () => {
                     </a>
                 </ImageWrapper>
                 <Hello onClick={onClick} text="Click here!" />
+                <Button onClick={() => console.log("Hello World")}>Print Hello World</Button>
             </div>
         </AppContainer>
     );

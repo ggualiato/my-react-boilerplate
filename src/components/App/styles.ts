@@ -16,3 +16,7 @@ export const AppContainer = styled.div`
 export const ImageWrapper = styled.div`
     width: min-content;
 `;
+
+export const Button = styled.button`
+    color: blue;
+`;
