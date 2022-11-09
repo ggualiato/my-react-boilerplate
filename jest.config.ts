@@ -2,8 +2,9 @@
  * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/configuration
  */
+import type { Config } from "jest";
 
-export default {
+const config: Config = {
     setupFilesAfterEnv: ["<rootDir>/src/tests/setupTests.ts"],
     testEnvironment: "jsdom",
     transform: {
@@ -13,3 +14,5 @@ export default {
     },
     snapshotSerializers: ["enzyme-to-json/serializer"],
 };
+
+export default config;
