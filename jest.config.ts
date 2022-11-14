@@ -5,7 +5,6 @@
 import type { Config } from "jest";
 
 const config: Config = {
-    setupFilesAfterEnv: ["<rootDir>/src/tests/setupTests.ts"],
     testEnvironment: "jsdom",
     transform: {
         "^.+\\.js?$": "babel-jest",

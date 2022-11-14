@@ -1,49 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button should have color blue 1`] = `
+exports[`should render App correctly 1`] = `
 .c0 {
+  font-size: 20px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  text-align: center;
+}
+
+.c0 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 div button {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.c1 {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.c2 {
   color: blue;
 }
 
-<button
-  className="c0"
-/>
-`;
-
-exports[`should render App correctly 1`] = `
-<styles__AppContainer>
-  <h3>
-    Hello React- Basic project
-  </h3>
-  <div>
-    <styles__ImageWrapper>
-      PNG
-      <img
-        src="react-icon.png"
-        width="200"
-      />
-    </styles__ImageWrapper>
-    <styles__ImageWrapper>
-      SVG
-      <a
-        href="#"
-        onClick={[Function]}
+<div>
+  <div
+    class="c0"
+  >
+    <h3>
+      Hello React- Basic project
+    </h3>
+    <div>
+      <div
+        class="c1"
       >
+        PNG
         <img
-          src="logo.svg"
+          src="react-icon.png"
           width="200"
         />
-      </a>
-    </styles__ImageWrapper>
-    <Hello
-      onClick={[Function]}
-      text="Click here!"
-    />
-    <styles__Button
-      onClick={[Function]}
-    >
-      Print Hello World
-    </styles__Button>
+      </div>
+      <div
+        class="c1"
+      >
+        SVG
+        <a
+          href="#"
+        >
+          <img
+            src="logo.svg"
+            width="200"
+          />
+        </a>
+      </div>
+      <button>
+        Click here!
+      </button>
+      <button
+        class="c2"
+      >
+        Print Hello World
+      </button>
+    </div>
   </div>
-</styles__AppContainer>
+</div>
 `;

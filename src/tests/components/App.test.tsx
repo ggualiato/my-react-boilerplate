@@ -1,17 +1,9 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import App from "../../components/App";
-import { Button } from "../../components/App/styles";
-import "jest-styled-components";
 
 test("should render App correctly", () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper).toMatchSnapshot();
-});
+    const { container } = render(<App />);
 
-test("Button should have color blue", () => {
-    const wrapper = shallow(<Button />);
-
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper).toHaveStyleRule("color", "blue");
+    expect(container).toMatchSnapshot();
 });
