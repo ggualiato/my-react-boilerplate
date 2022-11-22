@@ -1,13 +1,13 @@
 import React, { FC, useEffect } from "react";
 import Logo from "../../images/logo.svg";
 import ReactIcon from "../../images/react-icon.png";
-import Hello from "../Hello/Hello";
+import { Hello } from "../Hello";
 import { getTodo, getTodos } from "./../../services/todos";
 import { sayHello } from "./../../utils/hello";
 import { sum } from "./../../utils/sum";
 import { AppContainer, Button, ImageWrapper } from "./styles";
 
-const App: FC = () => {
+export const App: FC = () => {
     useEffect(() => {
         getTodos();
         getTodo(1);
@@ -37,5 +37,3 @@ const App: FC = () => {
         </AppContainer>
     );
 };
-
-export default App;

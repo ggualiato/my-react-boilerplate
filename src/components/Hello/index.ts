@@ -1,3 +1,1 @@
-import Hello from "./Hello";
-
-export default Hello;
+export * from "./Hello";

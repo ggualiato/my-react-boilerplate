@@ -1,6 +1,6 @@
 import React from "react";
 import { fireEvent, render } from "@testing-library/react";
-import Hello from "../../components/Hello/Hello";
+import { Hello } from "../../components/Hello";
 
 test("should render Hello correctly", () => {
     const onClick = jest.fn();

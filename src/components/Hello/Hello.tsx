@@ -5,8 +5,6 @@ interface HelloProps {
     onClick: () => void;
 }
 
-const Hello: FC<HelloProps> = (props) => {
+export const Hello: FC<HelloProps> = (props) => {
     return <button onClick={props.onClick}>{props.text}</button>;
 };
-
-export default Hello;
