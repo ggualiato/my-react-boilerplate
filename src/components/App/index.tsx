@@ -2,8 +2,7 @@ import React, { FC, useEffect } from "react";
 import Logo from "../../images/logo.svg";
 import ReactIcon from "../../images/react-icon.png";
 import { getTodo, getTodos } from "../../services/todos";
-import { sayHello } from "../../utils/hello";
-import { sum } from "../../utils/sum";
+import { sayHello, sum } from "../../utils";
 import { Hello } from "../Hello";
 import { AppContainer, Button, ImageWrapper } from "./styles";
 
