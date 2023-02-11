@@ -1,4 +1,4 @@
-import { sayHello } from "../../utils/hello";
+import { sayHello } from "@/utils/hello";
 
 test("should say Hello World correctly", () => {
     const result = sayHello(" World");

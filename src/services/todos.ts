@@ -1,24 +1,21 @@
+import { Todo } from "@/interfaces/Todo";
 import axios from "axios";
-import { Todo } from "../interfaces/Todo";
 
-export const getTodos = (): Promise<Todo[]> => {
-    return axios
-        .get<Todo[]>("https://jsonplaceholder.typicode.com/todos/")
-        .then((resp) => {
-            return resp.data;
-        })
-        .catch((error) => {
-            throw new Error(error);
-        });
+export const getTodos = async (): Promise<Todo[]> => {
+    try {
+        const resp = await axios.get<Todo[]>("https://jsonplaceholder.typicode.com/todos/");
+
+        return resp.data;
+    } catch (error) {
+        throw new Error(error);
+    }
 };
 
-export const getTodo = (id: number): Promise<Todo> => {
-    return axios
-        .get<Todo>("https://jsonplaceholder.typicode.com/todos/" + id)
-        .then((resp) => {
-            return resp.data;
-        })
-        .catch((error) => {
-            throw new Error(error);
-        });
+export const getTodo = async (id: number): Promise<Todo> => {
+    try {
+        const resp = await axios.get<Todo>("https://jsonplaceholder.typicode.com/todos/" + id);
+        return resp.data;
+    } catch (error) {
+        throw new Error(error);
+    }
 };

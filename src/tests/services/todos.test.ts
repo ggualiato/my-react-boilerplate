@@ -1,4 +1,4 @@
-import { getTodo, getTodos } from "../../services/todos";
+import { getTodo, getTodos } from "@/services/todos";
 
 test("should get all(length of 200) todos", async () => {
     const result = await getTodos();
