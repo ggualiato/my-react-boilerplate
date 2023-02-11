@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Todo } from "../interface/Todo";
+import { Todo } from "../interfaces/Todo";
 
 export const getTodos = (): Promise<Todo[]> => {
     return axios
