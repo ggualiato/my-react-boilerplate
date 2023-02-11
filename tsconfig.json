@@ -9,7 +9,11 @@
         "resolveJsonModule": true,
         "jsx": "react",
         "sourceMap": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "src",
+        "paths": {
+            "@/*": ["*"]
+        }
     },
     "include": ["src"],
     "exclude": ["node_modules", "build"]

@@ -1,5 +1,6 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const { merge } = require("webpack-merge");
 const createStyledComponentsTransformer = require("typescript-plugin-styled-components").default;
 const webpackDevConfig = require("./config/webpack.dev.config");
@@ -15,6 +16,7 @@ const commonConfig = {
     },
     resolve: {
         extensions: [".tsx", ".ts", ".js", "jsx"],
+        plugins: [new TsconfigPathsPlugin()],
     },
     module: {
         rules: [
