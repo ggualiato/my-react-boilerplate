@@ -12,7 +12,8 @@
         "test:watch": "jest --watch",
         "test:update-snapshot": "jest --updateSnapshot",
         "prepare": "husky install",
-        "lint:css": "stylelint ./src/**/*.ts"
+        "lint:css": "stylelint ./src/**/*.ts",
+        "lint": "eslint ."
     },
     "keywords": [],
     "author": "",
