@@ -25,6 +25,14 @@
                 "groups": ["/^react/", "module", ["parent", "sibling", "index"]],
                 "alphabetize": { "order": "asc", "ignoreCase": true }
             }
+        ],
+        "prefer-arrow-callback": "warn",
+        "react/self-closing-comp": [
+            "warn",
+            {
+                "component": true,
+                "html": true
+            }
         ]
     },
     "settings": {
