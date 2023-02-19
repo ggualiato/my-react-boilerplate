@@ -40,6 +40,10 @@ const commonConfig = {
                     name: "[path][name].[contenthash].[ext]",
                 },
             },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
         ],
     },
     plugins: [new CleanWebpackPlugin()],
