@@ -17,7 +17,7 @@
         "browser": true,
         "es2021": true
     },
-    "plugins": ["react", "import-helpers"],
+    "plugins": ["react", "import-helpers", "prefer-arrow"],
     "rules": {
         "import-helpers/order-imports": [
             "warn",
@@ -33,7 +33,8 @@
                 "component": true,
                 "html": true
             }
-        ]
+        ],
+        "prefer-arrow/prefer-arrow-functions": "warn"
     },
     "settings": {
         "react": {
