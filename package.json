@@ -84,5 +84,9 @@
     },
     "resolutions": {
         "styled-components": "^5"
+    },
+    "engines": {
+        "node": ">=16.10.0",
+        "npm": ">=7.24.0"
     }
 }
