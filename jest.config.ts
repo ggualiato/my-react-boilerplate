@@ -11,6 +11,9 @@ const config: Config = {
         "^.+\\.tsx?$": "babel-jest",
         "^.+\\.(svg|png)$": "<rootDir>/src/tests/transformers/fileTransformers.js",
     },
+    moduleNameMapper: {
+        "^@/(.*)$": "<rootDir>/src/$1",
+    },
 };
 
 export default config;
