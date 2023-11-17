@@ -3,14 +3,14 @@
 exports[`should render App correctly 1`] = `
 <div>
   <div
-    class="styles__AppContainer-sc-1dsxqrs-0 kEUWLY"
+    class="styles__AppContainer-sc-1dsxqrs-0 yXxsx"
   >
     <h3>
       Hello React- Basic project
     </h3>
     <div>
       <div
-        class="styles__ImageWrapper-sc-1dsxqrs-1 fVXvbn"
+        class="styles__ImageWrapper-sc-1dsxqrs-1 cnzkOi"
       >
         PNG
         <img
@@ -19,7 +19,7 @@ exports[`should render App correctly 1`] = `
         />
       </div>
       <div
-        class="styles__ImageWrapper-sc-1dsxqrs-1 fVXvbn"
+        class="styles__ImageWrapper-sc-1dsxqrs-1 cnzkOi"
       >
         SVG
         <a
@@ -35,7 +35,7 @@ exports[`should render App correctly 1`] = `
         Click here!
       </button>
       <button
-        class="styles__Button-sc-1dsxqrs-2 livmHh"
+        class="styles__Button-sc-1dsxqrs-2 hIEQhw"
       >
         Print Hello World
       </button>
