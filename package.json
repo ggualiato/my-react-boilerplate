@@ -75,7 +75,7 @@
         "express": "^4.17.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "styled-components": "^5",
+        "styled-components": "^6.1.1",
         "styled-normalize": "^8.0.7",
         "webpack-merge": "^5.8.0"
     },
